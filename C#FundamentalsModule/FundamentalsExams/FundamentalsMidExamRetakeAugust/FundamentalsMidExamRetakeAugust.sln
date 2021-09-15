@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFlag", "BlackFlag\BlackFlag.csproj", "{03471716-32FD-40AA-9B26-B13E09DD5DA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasureHunt", "TreasureHunt\TreasureHunt.csproj", "{8CE593CF-3D73-44A4-A440-E4B0EC69D62A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManOWar", "ManOWar\ManOWar.csproj", "{0042BA7B-F25E-4127-9935-BB34D2C03B8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03471716-32FD-40AA-9B26-B13E09DD5DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03471716-32FD-40AA-9B26-B13E09DD5DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03471716-32FD-40AA-9B26-B13E09DD5DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03471716-32FD-40AA-9B26-B13E09DD5DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE593CF-3D73-44A4-A440-E4B0EC69D62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE593CF-3D73-44A4-A440-E4B0EC69D62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE593CF-3D73-44A4-A440-E4B0EC69D62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE593CF-3D73-44A4-A440-E4B0EC69D62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0042BA7B-F25E-4127-9935-BB34D2C03B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0042BA7B-F25E-4127-9935-BB34D2C03B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0042BA7B-F25E-4127-9935-BB34D2C03B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0042BA7B-F25E-4127-9935-BB34D2C03B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F2B1DEF-B010-41A9-869A-BAB368B59F50}
+	EndGlobalSection
+EndGlobal
