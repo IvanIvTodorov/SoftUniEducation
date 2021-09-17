@@ -45,6 +45,7 @@ namespace LongestIncreasingSubsequence
                 bestList[i] = listOfDigit[lastIndex];
                 lastIndex = prev[lastIndex];
             }
+
             Array.Reverse(bestList);
 
             Console.WriteLine(string.Join(" ", bestList));
