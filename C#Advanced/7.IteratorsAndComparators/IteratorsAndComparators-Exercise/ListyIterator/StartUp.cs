@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 namespace ListyIterator
 {
@@ -35,6 +36,16 @@ namespace ListyIterator
                 else if (command == "HasNext")
                 {
                     Console.WriteLine(myIetarator.HasNext());
+                }
+                else if (command == "PrintAll")
+                {
+                    StringBuilder sb = new StringBuilder();
+
+                    foreach (var item in myIetarator)
+                    {
+                        sb.Append($"{item} ");
+                    }
+                    Console.WriteLine(sb.ToString().Trim());
                 }
 
                 command = Console.ReadLine();

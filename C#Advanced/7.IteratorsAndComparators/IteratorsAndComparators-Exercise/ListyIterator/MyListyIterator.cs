@@ -17,7 +17,10 @@ namespace ListyIterator
         public List<T> Elements { get; set; }
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < this.Elements.Count; i++)
+            {
+                yield return this.Elements[i];
+            }
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
