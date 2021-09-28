@@ -45,6 +45,7 @@ namespace ListyIterator
                     {
                         sb.Append($"{item} ");
                     }
+
                     Console.WriteLine(sb.ToString().Trim());
                 }
 
