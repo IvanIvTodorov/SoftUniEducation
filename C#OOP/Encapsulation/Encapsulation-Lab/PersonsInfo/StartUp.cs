@@ -24,6 +24,7 @@ namespace PersonsInfo
             persons.ForEach(p => p.IncreaseSalary(parcentage));
             persons.ForEach(p => Console.WriteLine(p.ToString()));
 
+
         }
     }
 }

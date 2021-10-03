@@ -22,17 +22,17 @@ namespace PersonsInfo
         {
             if (Age < 30)
             {
-                Salary = Salary * percentage / 100 * 100;
+                Salary += Salary * (percentage / 200);
             }
             else
             {
-                Salary = Salary * percentage / 100 * 200;
+                Salary += Salary * (percentage / 100);
             }
             
         }
         public override string ToString()
         {
-            return $"{FirstName} {LastName} is {Age} years old.";
+            return $"{FirstName} {LastName} receives {Salary:F2} leva.";
         }
     }
 }
