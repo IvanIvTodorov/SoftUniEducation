@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PersonsInfo
 {
@@ -10,101 +8,87 @@ namespace PersonsInfo
         private string lastName;
         private int age;
         private decimal salary;
-        public Person(string firstName, string lastName, int age,decimal salary)
+        public Person(string firstName, string lastName, int age, decimal salary)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Age = age;
-            Salary = salary;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Age = age;
+            this.Salary = salary;
         }
         public string FirstName
         {
             get
             {
-                return firstName;
+                return this.firstName;
             }
-            set 
+            set
             {
-                if (value.Length < 3)
+                if (value.Length <= 3)
                 {
                     throw new ArgumentException("First name cannot contain fewer than 3 symbols!");
                 }
-                else
-                {
-                    firstName = value;
-                }
+                this.firstName = value;
             }
         }
         public string LastName
         {
             get
             {
-                return lastName;
+                return this.lastName;
             }
             set
             {
-                if (value.Length < 3)
+                if (value.Length <= 3)
                 {
                     throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");
                 }
-                else
-                {
-                    lastName = value;
-                }
+                this.lastName = value;
             }
         }
         public int Age
         {
             get
             {
-                return age;
+                return this.age;
             }
             set
             {
-                if (age <= 0)
+                if (value <= 0)
                 {
                     throw new ArgumentException("Age cannot be zero or a negative integer!");
                 }
-                else
-                {
-                    age = value;
-                }
+                this.age = value;
             }
         }
         public decimal Salary
         {
             get
             {
-                return salary;
+                return this.salary;
             }
             set
             {
-                if (salary < 650)
+                if (value < 460)
                 {
-                    throw new ArgumentException("Salary cannot be less than 650 leva!");
+                    throw new ArgumentException("Salary cannot be less than 460 leva!");
                 }
-                else
-                {
-                    salary = value;
-                }
+                this.salary = value;
             }
         }
 
         public void IncreaseSalary(decimal percentage)
         {
-            if (Age < 30)
+
+            if (this.Age > 30)
             {
-                Salary += Salary * (percentage / 200);
+                this.Salary += this.Salary * percentage / 100;
             }
             else
             {
-                Salary += Salary * (percentage / 100);
+                this.Salary += this.Salary * percentage / 200;
             }
-            
         }
-        public override string ToString()
-        {
-            return $"{FirstName} {LastName} receives {Salary:F2} leva.";
-        }
+        public override string ToString() => $"{this.FirstName} {this.LastName} receives {this.Salary:f2} leva.";
     }
+
 }
