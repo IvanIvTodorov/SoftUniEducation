@@ -4,20 +4,17 @@ using System.Text;
 
 namespace BorderControl
 {
-    public class Citizen : IDetained
+    public class Pet : IDetained
     {
         private string name;
-        private string age;
-        private string id;
         private string birthday;
 
-        public Citizen(string name,string age,string id,string birthday)
+        public Pet(string name, string birthday)
         {
             this.name = name;
-            this.age = age;
-            this.id = id;
             this.birthday = birthday;
         }
+
         public void Detain(string ends)
         {
             if (birthday.EndsWith(ends))

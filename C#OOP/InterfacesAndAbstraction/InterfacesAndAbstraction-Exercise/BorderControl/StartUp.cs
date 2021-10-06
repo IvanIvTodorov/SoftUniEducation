@@ -24,15 +24,23 @@ namespace BorderControl
             {
                 string[] command = input.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-                if (command.Length > 2)
+                if (command.Length > 3)
                 {
-                    var citizen = new Citizen(command[0], command[1], command[2]);
+                    var citizen = new Citizen(command[1], command[2], command[3], command[4]);
                     citizen.Detain(detain);
                 }
                 else
                 {
-                    var robot = new Robot(command[0], command[1]);
-                    robot.Detain(detain);
+                    if (command[0] == "Pet")
+                    {
+                        var pet = new Pet(command[1], command[2]);
+                        pet.Detain(detain);
+                    }
+                    else
+                    {
+                        var robot = new Robot(command[0], command[1]);
+                    }
+                   
                 }
             }
         }
