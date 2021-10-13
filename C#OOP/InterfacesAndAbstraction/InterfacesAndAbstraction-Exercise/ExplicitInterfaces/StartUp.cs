@@ -18,11 +18,10 @@ namespace ExplicitInterfaces
                 string country = input[1];
                 int age = int.Parse(input[2]);
 
-                IPerson citizen = new Citizen(name,country,age);
-                IResident resident = new Citizen(name, country, age);
+                Citizen citizen = new Citizen(name,country,age);
 
                 Console.WriteLine(citizen.GetName());
-                Console.WriteLine(resident.GetName());
+                Console.WriteLine(((IResident)citizen).GetName());
             }
 
         }
