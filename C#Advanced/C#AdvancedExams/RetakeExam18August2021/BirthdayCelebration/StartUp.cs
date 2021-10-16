@@ -27,18 +27,16 @@ namespace BirthdayCelebration
                 currentGuest = guests.Dequeue();
                 currentFood = food.Pop();
 
-                if (currentGuest > currentFood)
+                while (currentGuest > currentFood)
                 {
-                    while (currentGuest > currentFood)
+                    currentGuest -= currentFood;
+                    if (food.Count == 0)
                     {
-                        currentGuest -= currentFood;
-                        if (food.Count == 0)
-                        {
-                            break;
-                        }
-                        currentFood = food.Pop();
+                        break;
                     }
+                    currentFood = food.Pop();
                 }
+
                 wastedFood += currentFood - currentGuest;
             }
 
