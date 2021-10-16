@@ -72,7 +72,7 @@ namespace TheBattleOfTheFIveArmies
                         StopTheProgram();
                     }
                 }
-                catch (IndexOutOfRangeException e)
+                catch (IndexOutOfRangeException)
                 {
                     ReturnPosition(direction, ref ArmyRow, ref ArmyCol);
                 }
