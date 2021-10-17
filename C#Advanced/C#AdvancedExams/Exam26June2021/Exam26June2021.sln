@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Masterchef", "Masterchef\Masterchef.csproj", "{CE363798-711D-4B76-9299-9B899F4C02C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survivor", "Survivor\Survivor.csproj", "{1ECF0C53-753D-4AE4-A0AC-B2E7397AA9D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkiRental", "SkiRental\SkiRental.csproj", "{76F24342-DBAB-424C-B17F-FED94BA80AD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE363798-711D-4B76-9299-9B899F4C02C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE363798-711D-4B76-9299-9B899F4C02C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE363798-711D-4B76-9299-9B899F4C02C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE363798-711D-4B76-9299-9B899F4C02C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECF0C53-753D-4AE4-A0AC-B2E7397AA9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECF0C53-753D-4AE4-A0AC-B2E7397AA9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECF0C53-753D-4AE4-A0AC-B2E7397AA9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECF0C53-753D-4AE4-A0AC-B2E7397AA9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F24342-DBAB-424C-B17F-FED94BA80AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F24342-DBAB-424C-B17F-FED94BA80AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F24342-DBAB-424C-B17F-FED94BA80AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F24342-DBAB-424C-B17F-FED94BA80AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3109A9DC-F102-4999-BE09-ADC3503DCCCA}
+	EndGlobalSection
+EndGlobal
