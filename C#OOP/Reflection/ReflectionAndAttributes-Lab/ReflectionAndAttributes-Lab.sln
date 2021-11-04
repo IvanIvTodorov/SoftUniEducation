@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stealer", "Stealer\Stealer.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collector", "Collector\Collector.csproj", "{F3C60CA3-82DF-4B34-88BB-FF82B16CFC94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorProblem", "AuthorProblem\AuthorProblem.csproj", "{4BE12302-F7AE-40E6-A14A-35FE8BC0D39D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F3C60CA3-82DF-4B34-88BB-FF82B16CFC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3C60CA3-82DF-4B34-88BB-FF82B16CFC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3C60CA3-82DF-4B34-88BB-FF82B16CFC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE12302-F7AE-40E6-A14A-35FE8BC0D39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE12302-F7AE-40E6-A14A-35FE8BC0D39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE12302-F7AE-40E6-A14A-35FE8BC0D39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE12302-F7AE-40E6-A14A-35FE8BC0D39D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
