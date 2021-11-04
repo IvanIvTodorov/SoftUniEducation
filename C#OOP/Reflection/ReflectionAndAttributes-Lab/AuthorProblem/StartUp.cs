@@ -2,14 +2,14 @@
 
 namespace AuthorProblem
 {
-    [AuthorAttribute("Victor")]
+    [Author("Victor")]
     public class StartUp
     {
-        [AuthorAttribute("George")]
+        [Author("George")]
         static void Main(string[] args)
         {
-           
-
+            var tracker = new Tracker();
+            tracker.PrintMethodsByAuthor();
         }
     }
 }
