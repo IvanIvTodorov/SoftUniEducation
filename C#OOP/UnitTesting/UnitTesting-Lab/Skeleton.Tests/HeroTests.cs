@@ -7,12 +7,6 @@ public class HeroTests
 {
     private const int EXP = 10;
 
-    private Hero hero;
-    [SetUp]
-    public void CreateHero()
-    {
-        hero = new Hero("Ivan");
-    }
     [Test]
     public void HeroGainsXPWhenTargetDies()
     {
@@ -27,6 +21,7 @@ public class HeroTests
             .Setup(exp => exp.GiveExperience())
             .Returns(EXP);
 
+        var hero = new Hero("Ivan", fakeWeapon.Object);
         hero.Attack(fakeTarget.Object);
 
         Assert.That(hero.Experience, Is.EqualTo(EXP));
