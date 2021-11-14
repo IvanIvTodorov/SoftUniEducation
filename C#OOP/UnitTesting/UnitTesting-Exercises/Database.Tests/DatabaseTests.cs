@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace Tests
 {
+    using Database;
     public class DatabaseTests
     {
         private int[] fullDatabase;
