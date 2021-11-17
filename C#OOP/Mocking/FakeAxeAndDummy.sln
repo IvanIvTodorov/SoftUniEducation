@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FakeAxeAndDummy", "FakeAxeAndDummy\FakeAxeAndDummy.csproj", "{34B85149-7E42-414F-B73D-AEF3DB0C8C6E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FakeAxeAndDummy.Tests", "FakeAxeAndDummy.Tests\FakeAxeAndDummy.Tests.csproj", "{F2E04D86-CF2E-4587-AA7A-431BAFB07F05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B85149-7E42-414F-B73D-AEF3DB0C8C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B85149-7E42-414F-B73D-AEF3DB0C8C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B85149-7E42-414F-B73D-AEF3DB0C8C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B85149-7E42-414F-B73D-AEF3DB0C8C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E04D86-CF2E-4587-AA7A-431BAFB07F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E04D86-CF2E-4587-AA7A-431BAFB07F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E04D86-CF2E-4587-AA7A-431BAFB07F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E04D86-CF2E-4587-AA7A-431BAFB07F05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7512D900-6894-49E4-9273-A37C703BEA03}
+	EndGlobalSection
+EndGlobal
