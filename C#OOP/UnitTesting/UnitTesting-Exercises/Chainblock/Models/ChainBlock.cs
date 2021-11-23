@@ -10,10 +10,16 @@ namespace Chainblock.Models
     public class ChainBlock : IChainblock
     {
         private ICollection<ITransaction> transactions;
+        private ITransaction transaction;
+        private List<string> collection;
+        private List<string> collectionReceivers;
 
         public ChainBlock(List<ITransaction> transactions)
         {
             this.transactions = transactions;
+            transaction = new Transaction(1, TransactionStatus.Successfull, "Ivan", "Vanyo", 5.0);
+            collection = new List<string>();
+            collectionReceivers = new List<string>();
         }
         public int Count => transactions.Count;
 
@@ -62,12 +68,32 @@ namespace Chainblock.Models
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
         {
-            throw new NotImplementedException();
+            if (transactions.Any(s => s.Status == status) == false)
+            {
+                throw new InvalidOperationException();
+            }
+
+            foreach (var tx in transactions.OrderBy(a => a.Amount).Where(s => s.Status == status))
+            {
+                collectionReceivers.Add(tx.To.ToString());
+            }
+
+            return collectionReceivers;
         }
 
         public IEnumerable<string> GetAllSendersWithTransactionStatus(TransactionStatus status)
         {
-            throw new NotImplementedException();
+            if (transactions.Any(s => s.Status == status) == false )
+            {
+                throw new InvalidOperationException();
+            }
+
+            foreach (var tx in transactions.OrderBy(a => a.Amount).Where(s => s.Status == status))
+            {
+                collection.Add(tx.From.ToString());
+            }
+
+            return collection;
         }
 
         public ITransaction GetById(int id)
@@ -102,7 +128,15 @@ namespace Chainblock.Models
 
         public IEnumerable<ITransaction> GetByTransactionStatus(TransactionStatus status)
         {
-            throw new NotImplementedException();
+            if (transactions.Any(s => s.Status == status) == false)
+            {
+                throw new InvalidOperationException();
+            }
+
+            var result = transactions.OrderByDescending(a => a.Amount);
+
+            return result;
+            
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatusAndMaximumAmount(TransactionStatus status, double amount)
@@ -112,17 +146,24 @@ namespace Chainblock.Models
 
         public IEnumerator<ITransaction> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return transactions.GetEnumerator();
         }
 
         public void RemoveTransactionById(int id)
         {
-            throw new NotImplementedException();
+            if (Contains(id) == false)
+            {
+                throw new ArgumentException();
+            }
+
+            var remove = GetById(id);
+
+            transactions.Remove(remove);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return this.GetEnumerator();
         }
     }
 }
