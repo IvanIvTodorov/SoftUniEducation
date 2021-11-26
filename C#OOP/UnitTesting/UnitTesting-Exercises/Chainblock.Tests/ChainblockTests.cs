@@ -24,6 +24,7 @@ namespace Chainblock.Tests
         private string from = "Vanyo";
         private double secondAmount = 4.0;
         private double amount = 5.0;
+        string fake = "Fake";
 
         [SetUp]
         public void SetUp()
@@ -40,7 +41,7 @@ namespace Chainblock.Tests
         [Test]
         public void TestIfConstructorWorksProperly()
         {
-            var expectedCount = 1;
+            var expectedCount = 2;
 
             Assert.AreEqual(expectedCount, chainblock.Count);
         }
@@ -167,6 +168,45 @@ namespace Chainblock.Tests
             }
 
             Assert.AreEqual(listofTransactions, chainblock.GetAllReceiversWithTransactionStatus(TransactionStatus.Successfull));
+        }
+
+        [Test]
+        public void TestIfGetAllTransactionsWorksProperly()
+        {
+            var expected = chainblock.OrderByDescending(a => a.Amount).ThenBy(i => i.Id);
+
+            Assert.AreEqual(expected, chainblock.GetAllOrderedByAmountDescendingThenById());
+        }
+
+        [Test]
+        public void TestIfGetBySenderOrderedByAmountThrowsException()
+        {         
+            Assert.That(() => chainblock.GetBySenderOrderedByAmountDescending(fake),
+                Throws.InvalidOperationException);
+        }
+
+        [Test]
+        public void TestIfGetBySenderOrderedByAmountWorksProperly()
+        {
+            var expected = chainblock.Where(s => s.From == from).OrderByDescending(a => a.Amount);
+
+            Assert.AreEqual(expected, chainblock.GetBySenderOrderedByAmountDescending(from));
+
+        }
+
+        [Test]
+        public void TestIfGetByReceiverOrderedByAmountThenByIdThrowsException()
+        {
+            Assert.That(() => chainblock.GetByReceiverOrderedByAmountThenById(fake),
+                Throws.InvalidOperationException);
+        }
+
+        [Test]
+        public void TestIfGetByReceiverOrderedByAmountThenByIdWorksProperly()
+        {
+            var expected = chainblock.Where(r => r.To == to).OrderBy(a => a.Amount).ThenBy(i => i.Id);
+
+            Assert.AreEqual(expected, chainblock.GetByReceiverOrderedByAmountThenById(to));
         }
     }
 }

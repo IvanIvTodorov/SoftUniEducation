@@ -63,7 +63,7 @@ namespace Chainblock.Models
 
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
         {
-            throw new NotImplementedException();
+            return transactions.OrderByDescending(a => a.Amount).ThenBy(i => i.Id);
         }
 
         public IEnumerable<string> GetAllReceiversWithTransactionStatus(TransactionStatus status)
@@ -113,7 +113,12 @@ namespace Chainblock.Models
 
         public IEnumerable<ITransaction> GetByReceiverOrderedByAmountThenById(string receiver)
         {
-            throw new NotImplementedException();
+            if (transactions.Any(t => t.To == receiver) == false)
+            {
+                throw new InvalidOperationException();
+            }
+
+            return transactions.Where(t => t.To == receiver).OrderBy(a => a.Amount).ThenBy(i => i.Id);
         }
 
         public IEnumerable<ITransaction> GetBySenderAndMinimumAmountDescending(string sender, double amount)
@@ -123,7 +128,12 @@ namespace Chainblock.Models
 
         public IEnumerable<ITransaction> GetBySenderOrderedByAmountDescending(string sender)
         {
-            throw new NotImplementedException();
+            if (transactions.Any(s => s.From == sender) == false)
+            {
+                throw new InvalidOperationException();
+            }
+
+            return transactions.Where(s => s.From == sender).OrderByDescending(a => a.Amount);
         }
 
         public IEnumerable<ITransaction> GetByTransactionStatus(TransactionStatus status)
