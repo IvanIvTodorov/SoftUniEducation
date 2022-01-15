@@ -30,7 +30,7 @@ function fromJSONToHTMLTable(json) {
              .replace(/</g, "&lt;")
              .replace(/>/g, "&gt;")
              .replace(/"/g, "&quot;")
-             .replace(/'/g, "&#039;");
+             .replace(/'/g, "&#39;");
      };
 
     console.log(outputArr.join('\n'));  
