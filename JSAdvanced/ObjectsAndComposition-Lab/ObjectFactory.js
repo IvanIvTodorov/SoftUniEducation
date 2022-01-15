@@ -1,9 +1,15 @@
 function factory(library, orders){
 
-    const result = [];
+    return orders.map(copy);
 
-    for (const iterator of object) {
-        
+    function copy(item){
+      const current = Object.assign({}, item.template);
+
+      for (const part of item.parts) {
+        current[part] = library[part];
+      }
+
+      return current;
     }
 }
 
