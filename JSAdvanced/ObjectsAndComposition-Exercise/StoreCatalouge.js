@@ -12,14 +12,13 @@ function storeTheItems(arr) {
     console.log(compare);
     console.log(`  ${collection[0].product}: ${collection[0].price}`)
     collection.splice(0, 1);
+
     for (const iterator of collection) {
-        if (iterator.product[0] == compare) {
-            console.log(`  ${iterator.product}: ${iterator.price}`)
-        } else {
+        if (iterator.product[0] != compare) {
             compare = iterator.product[0];
             console.log(compare);
-            console.log(`  ${iterator.product}: ${iterator.price}`);
         }
+        console.log(`  ${iterator.product}: ${iterator.price}`);
     }
 }
 
