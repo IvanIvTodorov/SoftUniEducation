@@ -9,7 +9,6 @@ function solve() {
       for (const restaurant of splited) {
          let workers = restaurant.split(/[\s\-\,]+/);
          let name = workers.shift();
-         let workersCol = [];
 
          if (!restaurantCol.find(x => x.restName === name)) {
             restaurantCol.push({
