@@ -8,13 +8,12 @@ function addItem() {
     const button = document.createElement('a');
     button.textContent = "[Delete]";
     button.href = "#";
-    button.addEventListener('click', removeElement);
+    button.addEventListener('click', onClick);
 
 
-    function removeElement(ev) {
+    function onClick(ev) {
 
-        let parent = ev.target.parentNode;
-        parent.remove();
+        ev.target.parentNode.remove();
 
     }
 
