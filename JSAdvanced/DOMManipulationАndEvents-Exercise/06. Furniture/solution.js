@@ -3,13 +3,10 @@ function solve() {
   let buyButton = document.getElementsByTagName('button')[1];
   let textarea = document.getElementsByTagName('textarea');
   let table = document.getElementsByTagName('tbody');
-  let firstRow = document.getElementsByTagName('tr')[1].children[4];
-
-  firstRow.firstElementChild.disabled = false;
 
   generateButton.addEventListener('click', onClick);
 
-  function onClick(ev) {
+  function onClick() {
     let obj = JSON.parse(textarea[0].value);
 
     for (const element of obj) {
@@ -54,8 +51,7 @@ function solve() {
     let newTable = document.getElementsByTagName('tr');
     let nameArr = [];
     let total = 0;
-    let avgArr = [];
-    // newTable[1].children[1].textContent = "Office chair";
+    let avgSum = 0;
     
     for (let index = 1; index < newTable.length; index++)
      {
@@ -63,25 +59,17 @@ function solve() {
       let mark = lastElement.firstElementChild;
 
       let name = newTable[index].children[1].textContent;
-      console.log(newTable[index]);
       let price = Number(newTable[index].children[2].textContent);
       let decFactor = Number(newTable[index].children[3].textContent);
       
-
       if (mark.checked) {
         nameArr.push(name);
         total += price;
-        avgArr.push(decFactor);  
+        avgSum += decFactor; 
       }
     }
 
-    let avgSum = 0;
-    
-    for (const num of avgArr) {
-      avgSum += num;
-    }
-
-    avgSum = avgSum /  avgArr.length;
+    avgSum = avgSum / nameArr.length;
 
     let output = `Bought furniture: ${nameArr.join(", ")}\n`
     output += `Total price: ${total.toFixed(2)}\n`

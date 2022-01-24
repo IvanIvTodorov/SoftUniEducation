@@ -1,6 +1,5 @@
 function lockedProfile() {
-    let profiles = Array.from(document.getElementsByClassName('profile'));
-    console.log(profiles);
+    let profiles = Array.from(document.getElementsByClassName('profile'));  
     for (const profile of profiles) {
 
         profile.lastElementChild.addEventListener('click', onClick);
