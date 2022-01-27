@@ -1,7 +1,22 @@
 function solve(...args){
-    
+    let output = [];
 
-    console.log(args[3]);
+    for (const item of args) {
+        console.log(`${typeof item}: ${item}`)
+        let temp = output.find(obj => obj[typeof item]);
+
+        if (temp) {       
+            temp[typeof item] += 1; 
+        }else
+        output.push({
+            [typeof item]: 1
+        })
+    }
+    output.sort((a ,b) => Object.values(b) - Object.values(a));
+
+    for (const item of output) {
+        console.log(`${Object.keys(item)} = ${Object.values(item)}`)
+    }
 };
 
-solve('cat', 42, function () { console.log('Hello world!'); })
+solve('cat', 'rat', 58, function () { console.log('Hello world!'); })
