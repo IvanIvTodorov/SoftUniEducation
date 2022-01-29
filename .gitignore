@@ -5,3 +5,4 @@ obj
 *.gif
 *.png
 /JSAdvanced/AdvancedFunctions-Exercise/09. Central Cinema/*.jpg
+/JSAdvanced/UnitTestingAndErrorHandling-Lab/node_modules
