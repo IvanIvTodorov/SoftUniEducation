@@ -1,13 +1,8 @@
 bin
 obj
-.png
 .vs
 *.gif
 *.png
-/JSAdvanced/AdvancedFunctions-Exercise/09. Central Cinema/*.jpg
-/JSAdvanced/UnitTestingAndErrorHandling-Lab/node_modules
-/JSAdvanced/UnitTestingAndErrorHandling-Lab/*.json
-/JSAdvanced/UnitTestingAndErrorHandling-Exercise/07.Form-Validation/images
-/JSAdvanced/UnitTestingAndErrorHandling-Exercise/node_modules
-/JSAdvanced/UnitTestingAndErrorHandling-Exercise/package.json
-/JSAdvanced/UnitTestingAndErrorHandling-Exercise/package-lock.json
+node_modules
+*.jpg
+*.json
